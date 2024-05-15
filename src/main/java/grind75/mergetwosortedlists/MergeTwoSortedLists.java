@@ -44,20 +44,20 @@ public class MergeTwoSortedLists {
         mergeTwoSortedLists.printLinkedList(mergedHead);
     }
 
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if (list1 == null) {
-            return list2;
+    public ListNode mergeTwoLists(ListNode head1, ListNode head2) {
+        if (head1 == null) {
+            return head2;
         }
-        if (list2 == null) {
-            return list1;
+        if (head2 == null) {
+            return head1;
         }
 
-        if (list1.val < list2.val) {
-            list1.next = mergeTwoLists(list1.next, list2);
-            return list1;
+        if (head1.val < head2.val) {
+            head1.next = mergeTwoLists(head1.next, head2);
+            return head1;
         } else {
-            list2.next = mergeTwoLists(list1, list2.next);
-            return list2;
+            head2.next = mergeTwoLists(head1, head2.next);
+            return head2;
         }
     }
 

@@ -27,11 +27,11 @@ public class BinarySearch {
     }
 
     private int findIndex(int[] nums, int target, int start, int end) {
-        int middle = start + ((end - start) / 2);
-
         if (end < start) {
             return -1;
         }
+
+        int middle = start + ((end - start) / 2);
 
         if (target == nums[middle]) {
             return middle;
