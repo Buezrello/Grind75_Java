@@ -7,8 +7,8 @@ import java.util.Stack;
  * The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
  */
 public class ImplementQueueUsingStacks {
-    private Stack<Integer> stack;
-    private Stack<Integer> tempStack;
+    private final Stack<Integer> stack;
+    private final Stack<Integer> tempStack;
 
     public ImplementQueueUsingStacks() {
         stack = new Stack<>();
