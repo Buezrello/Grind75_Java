@@ -22,7 +22,7 @@ public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         Map<Character, Long> sMap = s.chars()
                 .mapToObj(i -> (char) i)
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                .collect(Collectors.groupingBy(/*Function.identity()*/c->c, Collectors.counting()));
         Map<Character, Long> tMap = t.chars()
                 .mapToObj(i -> (char) i)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
